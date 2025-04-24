@@ -51,7 +51,7 @@ def war(game_cards,war_players_pos,all_players):
         war_cards = []
         for pos in war_players_pos:
             war_cards.append(all_players[pos].remove_card())
-        game_cards = game_cards + war_cards
+        game_cards = game_cards + war_cards # game_cards.extend(war_cards)
         war_win = highest_card(war_cards)
 
         # If there is a winner he takes all the cards played on that round.
