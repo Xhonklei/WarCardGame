@@ -12,32 +12,27 @@ class Deck:
 
     def __init__(self):
         # Create the deck with all cards combinations
-        self.all_cards = []
+        self.all_card = []
         for suit in suits:
             for rank in ranks:
-                self.all_cards.append(Card(suit,rank))
+                self.all_card.append(Card(suit,rank))
     
     # This is the length function of the Deck 
     def __len__(self):
-        return len(self.all_cards)
+        return len(self.all_card)
     
     # This does the shuffling of all the deck
     def shuffle_deck(self):
-        random.shuffle(self.all_cards)
+        random.shuffle(self.all_card)
 
     # This is the string function of the deck, to check it.
     def __str__(self):
-        for card in self.all_cards:
+        for card in self.all_card:
             print(card)
         return 'This is the deck you have!'
     
     # This is the function that remove one card 
     # from top of the deck
     def deal_one(self):
-        return self.all_cards.pop()
-        
-    def add_cards(self,played_cards = []):
-        self.all_cards = played_cards + self.all_cards
-        
-        
+        return self.all_card.pop()
         
